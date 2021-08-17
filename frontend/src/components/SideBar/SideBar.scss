@@ -1,0 +1,21 @@
+.content-wrapper {
+    .side-bar {
+        margin: .5rem;
+        width: 20%;
+        height: 88vh;
+        background-color: #2672f6;
+        position: fixed;
+        border-right: 1rem;
+        z-index: 99;
+        transform-origin: left;
+        border-radius: 10px;
+        .flex-column{
+            margin: 2rem 1rem;
+            font-size: .8rem;
+            .nav-link{
+                color: white;
+            }
+            
+        }
+    }
+}

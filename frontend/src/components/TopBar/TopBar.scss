@@ -1,0 +1,25 @@
+.nav-wrapper{
+    background-color: #1e1e2e;
+    // box-shadow: -1px 5px 3px -1px rgba(0, 0, 0, 0.1);
+    // -webkit-box-shadow: -1px 5px 3px -1px rgba(0, 0, 0, 0.1);
+    // -moz-box-shadow: -1px 5px 3px -1px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    .navbar-brand{
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(60, 131, 128) !important;
+    }
+    .icon-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-container{
+        transition: all .4s ease-in-out;
+        &:hover{
+            opacity: .75;
+        }
+    }
+}
+
+
