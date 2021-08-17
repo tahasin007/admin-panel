@@ -2,29 +2,27 @@ import TopBar from './components/TopBar/TopBar.jsx'
 import SideBar from './components/SideBar/SideBar.jsx'
 import Home from './pages/Home/Home.jsx'
 import './App.scss'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Users from './pages/Users/Users.jsx'
+import AddUser from './pages/AddUser/AddUser.jsx'
 
 function App() {
   return (
-    <Router>
+    <>
       <TopBar />
 
       <div className='content-wrapper'>
         <SideBar className='side-bar' />
-        <Switch>
-          <div className='main-content'>
-            <Route path='/' exact>
-              <Home />
-            </Route>
 
-            <Route path='/users' exact>
-              <Users />
-            </Route>
-          </div>
-        </Switch>
+        <div className='main-content'>
+          <Switch>
+            <Route path='/' exact component={Home}></Route>
+            <Route path='/users' exact component={Users}></Route>
+            <Route path='/adduser' exact component={AddUser}></Route>
+          </Switch>
+        </div>
       </div>
-    </Router>
+    </>
   )
 }
 
