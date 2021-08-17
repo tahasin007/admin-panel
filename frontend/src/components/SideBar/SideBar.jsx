@@ -8,7 +8,7 @@ const SideBar = () => {
     <>
       <div className='side-bar'>
         <Nav defaultActiveKey='/home' className='flex-column' variant='white'>
-            <Nav.Link href='/home'>
+            <Nav.Link href='/'>
                 <Dashboard className='mr-2'/>
                 Dashboard</Nav.Link>
           <Nav.Link href='/users'>
