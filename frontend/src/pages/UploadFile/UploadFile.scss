@@ -1,15 +1,6 @@
 .main-content {
   .upload-wrapper {
     padding: 4rem 2.5rem;
-    .btn-primary {
-      background-color: #65375eb6;
-      border: rgb(44, 12, 44);
-      transform: all .3s ease-in-out;
-
-      &:hover {
-        background-color: #65375e;
-      }
-    }
     .drop-container {
       display: flex;
       align-items: center;

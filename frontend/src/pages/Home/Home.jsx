@@ -13,7 +13,7 @@ const Home = () => {
               </Card.Subtitle>
               <Card.Title className='text-dark'>100</Card.Title>
               <Card.Text className='text-dark'>
-                Compated to last month
+                Compared to last month
               </Card.Text>
             </Card.Body>
           </Card>
@@ -27,7 +27,7 @@ const Home = () => {
               </Card.Subtitle>
               <Card.Title className='text-dark'>$1,500</Card.Title>
               <Card.Text className='text-dark'>
-                Compated to last month
+                Compared to last month
               </Card.Text>
             </Card.Body>
           </Card>

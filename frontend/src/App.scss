@@ -3,5 +3,25 @@
     .main-content{
         margin-left: 20%;
         width: 80%;
+        .btn-primary {
+            background-color: #65375eb6 !important;
+            border: rgb(44, 12, 44) !important;
+            transform: all 0.3s ease-in-out !important;
+
+            &:hover {
+                background-color: #65375e !important;
+            }
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            &:active {
+                background-color: #65375eb6 !important;
+                border: rgb(44, 12, 44) !important;
+                transform: all 0.3s ease-in-out !important;
+            }
+        }
     }
 }

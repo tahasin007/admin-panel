@@ -11,9 +11,9 @@ const SideBar = () => {
             <Nav.Link href='/'>
                 <Dashboard className='mr-2'/>
                 Dashboard</Nav.Link>
-          <Nav.Link href='/users'>
+          <Nav.Link href='/employees'>
               <Storage className='mr-2'/>
-              Users</Nav.Link>
+              Employees</Nav.Link>
         </Nav>
       </div>
     </>

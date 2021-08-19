@@ -1,4 +1,4 @@
-import './AddUser.scss'
+import './AddEmployee.scss'
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import * as yup from 'yup'
 import { Formik } from 'formik'
@@ -6,8 +6,9 @@ import { Publish } from '@material-ui/icons'
 import { Tooltip, Zoom } from '@material-ui/core'
 import axios from 'axios'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
+import { Link } from 'react-router-dom'
 
-const AddUser = ({ history }) => {
+const AddEmployee = ({ history }) => {
   const validationSchema = yup.object().shape({
     firstName: yup
       .string()
@@ -111,7 +112,7 @@ const AddUser = ({ history }) => {
                   ) : null}
                 </Form.Group>
                 <Row className='justify-content-end mr-1'>
-                  <Button variant='primary' type='submit'>
+                  <Button variant='primary btn-style' type='submit'>
                     Add User
                   </Button>
                 </Row>
@@ -123,13 +124,15 @@ const AddUser = ({ history }) => {
           <Row className='justify-content-center'>
             <Tooltip
               TransitionComponent={Zoom}
-              title='Add Multiple Users'
+              title='Add Multiple Employees'
               arrow
             >
-              <Button variant='primary' size='lg'>
-                <Publish className='ml-1' />
-                Import CSV
-              </Button>
+              <Link to='/uploadcsv'>
+                <Button variant='primary'>
+                  <Publish className='mr-2' />
+                  Upload CSV
+                </Button>
+              </Link>
             </Tooltip>
           </Row>
         </Col>
@@ -138,4 +141,4 @@ const AddUser = ({ history }) => {
   )
 }
 
-export default AddUser
+export default AddEmployee

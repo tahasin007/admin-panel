@@ -1,11 +1,14 @@
-import './Users.scss'
-import { Container, Row, Col } from 'react-bootstrap'
+import './Employees.scss'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import * as React from 'react'
 import { DataGrid } from '@material-ui/data-grid'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Tooltip, Zoom } from '@material-ui/core'
+import { Add } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
-const Users = () => {
+const Employees = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
@@ -41,6 +44,15 @@ const Users = () => {
 
   return (
     <Container fluid className='users-container'>
+      <Row className='justify-content-end mb-3' style={{ marginRight: '20%' }}>
+        <Tooltip TransitionComponent={Zoom} title='Add New Employees' arrow>
+          <Link to='/addemployees' exact>
+            <Button variant='primary'>
+              <Add className='mr-2' /> Add Employee
+            </Button>
+          </Link>
+        </Tooltip>
+      </Row>
       <Row>
         <Col xl={10} style={{ height: 500, width: '100%' }}>
           <DataGrid
@@ -57,4 +69,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Employees
