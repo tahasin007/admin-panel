@@ -1,16 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { Users } = require('../models')
+const {
+  addUsersCSV,
+  getUsers,
+  addUser,
+} = require('../controller/userController')
 
-router.get('/', async (req, res) => {
-  const listOfUsers = await Users.findAll()
-  res.json(listOfUsers)
-})
+router.route('/').get(getUsers).post(addUser)
 
-router.post('/', async (req, res) => {
-  const users = req.body
-  await Users.create(users)
-  res.json(users)
-})
+router.route('/csv').post(addUsersCSV)
 
 module.exports = router

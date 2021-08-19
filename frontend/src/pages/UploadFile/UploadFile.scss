@@ -1,0 +1,104 @@
+.main-content {
+  .upload-wrapper {
+    padding: 4rem 2.5rem;
+    .btn-primary {
+      background-color: #65375eb6;
+      border: rgb(44, 12, 44);
+      transform: all .3s ease-in-out;
+
+      &:hover {
+        background-color: #65375e;
+      }
+    }
+    .drop-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      flex-direction: column;
+      border: 4px dashed #4aa1f3;
+      .icon-style {
+        cursor: pointer;
+        color: rgba(36, 123, 173, 0.712);
+        transform: all 0.3s ease-in-out;
+        background-color: #1e1e2e;
+        font-size: 1.8rem;
+        border-radius: 20%;
+        &:hover {
+          color: rgb(36, 123, 173);
+        }
+      }
+    }
+    .drop-message {
+      cursor: default;
+      color: white;
+    }
+    .file-input {
+        display: none;
+    }
+  }
+  .file-preview-wrapper {
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .file-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .file-name {
+      color: #4aa1f3;
+      font-size: 15px;
+    }
+
+    .file-type-logo {
+      width: 50px;
+      height: 50px;
+      background: url(../../images/csv.jpg) no-repeat center center;
+      background-size: 100%;
+    }
+
+    .file-size {
+      color: #30693d;
+      color: #444242;
+      font-weight: 700;
+      font-size: 11px;
+      padding-left: 5px;
+    }
+
+    .file-remove {
+      cursor: pointer;
+      color: rgba(255, 0, 0, 0.637);
+    }
+  }
+  .MuiDataGrid-root {
+    -webkit-box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.35);
+    box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.35);
+    background-color: #26293c;
+    border: none;
+  }
+
+  .MuiDataGrid-root {
+    color: #83838e;
+  }
+
+  .MuiIconButton-label {
+    color: #83838e;
+  }
+
+  .MuiDataGrid-sortIcon {
+    &:hover {
+      color: white;
+    }
+  }
+
+  .MuiTablePagination-caption {
+    color: #83838e;
+  }
+
+  .MuiDataGrid-columnHeaderWrapper {
+    background-color: #121527;
+  }
+}

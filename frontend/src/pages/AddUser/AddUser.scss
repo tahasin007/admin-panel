@@ -12,15 +12,15 @@
         padding: 2rem 1rem;
         .form-label {
           color: #848b88;
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
         .form-group {
           padding-bottom: 0.75rem;
           &:last-child {
             padding-bottom: 0rem;
           }
-          input{
-              color: rgb(206, 206, 206);
+          input {
+            color: rgb(206, 206, 206);
           }
           .form-control {
             background-color: #474a5e49;
@@ -32,10 +32,26 @@
                 0 0 8px rgba(60, 55, 88, 0.6);
             }
             &::-webkit-input-placeholder {
-                color: #b1b1b1;
+              color: #b1b1b1;
             }
           }
+          .error {
+            border: 2px solid rgb(153, 51, 51) !important;
+          }
         }
+      }
+    }
+    .button-container {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .btn-primary {
+      background-color: #65375eb6;
+      border: rgb(44, 12, 44);
+      transform: all .3s ease-in-out;
+
+      &:hover {
+        background-color: #65375e;
       }
     }
   }
