@@ -12,10 +12,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "cros": "^1.0.1",
+    "email-templates": "^8.0.8",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "import": "^0.0.6",
     "mysql2": "^2.3.0",
+    "pug": "^3.0.2",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"
   },

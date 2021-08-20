@@ -8,7 +8,7 @@ import * as fileUtils from '../../Utils/fileHelper'
 import { DataGrid } from '@material-ui/data-grid'
 import { Tooltip, Zoom } from '@material-ui/core'
 import axios from 'axios'
-import { columns } from '../../constants/constants'
+import { columns, options } from '../../constants/constants'
 
 const UploadFile = () => {
   const [selectedFile, setSelectedFile] = useState([])
@@ -74,27 +74,11 @@ const UploadFile = () => {
 
   const toastHandler = () => {
     if (infoMessage) {
-      toast.info(infoMessage, {
-        position: 'bottom-right',
-        autoClose: 2500,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-      })
+      toast.info(infoMessage, options)
       setinfoMessage(null)
     }
     if (errorMessage) {
-      toast.error(errorMessage, {
-        position: 'bottom-right',
-        autoClose: 2500,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-      })
+      toast.error(errorMessage, options)
       setErrorMessage(null)
     }
   }

@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import Employees from './pages/Employees/Employees'
 import AddEmployee from './pages/AddEmployee/AddEmployee'
 import UploadFile from './pages/UploadFile/UploadFile'
+import SendEmail from './pages/SendEmail/SendEmail'
 import { ToastContainer } from 'react-toastify'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/employees' exact component={Employees}></Route>
             <Route path='/addemployees' exact component={AddEmployee}></Route>
             <Route path='/uploadcsv' exact component={UploadFile}></Route>
+            <Route path='/mail' exact component={SendEmail}></Route>
           </Switch>
         </div>
       </div>

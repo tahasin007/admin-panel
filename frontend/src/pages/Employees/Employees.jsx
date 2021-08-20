@@ -12,9 +12,11 @@ const Employees = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users').then((res) => {
-      setUsers(res.data)
-    })
+    axios
+      .get('http://localhost:5000/api/users')
+      .then((res) => {
+        setUsers(res.data)
+      })
   }, [])
   const columns = [
     { field: 'id', headerName: 'ID', width: 120, editable: false },
@@ -46,7 +48,7 @@ const Employees = () => {
     <Container fluid className='users-container'>
       <Row className='justify-content-end mb-3' style={{ marginRight: '20%' }}>
         <Tooltip TransitionComponent={Zoom} title='Add New Employees' arrow>
-          <Link to='/addemployees' exact>
+          <Link to='/addemployees'>
             <Button variant='primary'>
               <Add className='mr-2' /> Add Employee
             </Button>
