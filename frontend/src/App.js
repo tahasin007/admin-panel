@@ -1,13 +1,14 @@
 import TopBar from './components/TopBar/TopBar'
 import SideBar from './components/SideBar/SideBar'
 import Home from './pages/Home/Home'
-import './App.scss'
 import { Switch, Route } from 'react-router-dom'
 import Employees from './pages/Employees/Employees'
 import AddEmployee from './pages/AddEmployee/AddEmployee'
 import UploadFile from './pages/UploadFile/UploadFile'
 import SendEmail from './pages/SendEmail/SendEmail'
 import { ToastContainer } from 'react-toastify'
+import './bootstrap.min.css'
+import './App.scss'
 
 function App() {
   return (

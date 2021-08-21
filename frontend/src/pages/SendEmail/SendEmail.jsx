@@ -18,7 +18,7 @@ const SendEmail = ({ match }) => {
   const [employeeEmail, setEmployeeEmail] = useState('')
   const location = useLocation()
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users').then((res) => {
+    axios.get('/api/users').then((res) => {
       setUsers(res.data)
     })
     if (location.state) {
@@ -83,7 +83,7 @@ const SendEmail = ({ match }) => {
             onSubmit={(values, actions) => {
               actions.setSubmitting(true)
               axios
-                .post('http://localhost:5000/api/users/mail', values)
+                .post('/api/users/mail', values)
                 .then((res) => {
                   actions.setSubmitting(false)
                   actions.resetForm()

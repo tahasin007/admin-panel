@@ -14,7 +14,7 @@ const Employees = ({ history }) => {
   const [selectedMail, setSelectedMail] = useState([])
   
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users').then((res) => {
+    axios.get('/api/users').then((res) => {
       setUsers(res.data)
     })
   }, [selectedMail])

@@ -93,7 +93,7 @@ const UploadFile = () => {
 
   const addHandler = () => {
     axios
-      .post('http://localhost:5000/api/users/csv', users)
+      .post('/api/users/csv', users)
       .then((res) => {
         setinfoMessage(res.data.message)
         setIsCsv(false)

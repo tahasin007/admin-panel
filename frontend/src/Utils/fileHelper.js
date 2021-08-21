@@ -19,7 +19,6 @@ export const csvReader = (text) => {
       })
     }
   })
-  console.log(user)
   return user
 }
 

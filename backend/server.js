@@ -1,7 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const userRoutes = require('./routes/userRoutes')
-const cors = require('cors')
+// const cors = require('cors')
 const path = require('path')
 
 dotenv.config()
@@ -11,7 +11,10 @@ const db = require('./models')
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+// const corsOptions = {
+//   origin: 'http://localhost:3000',
+//   optionSuccessStatus: 200,
+// }
 
 app.set('views', path.join(__dirname, 'emails'))
 app.set('view engine', 'pug')
