@@ -7,6 +7,7 @@ import { Tooltip, Zoom } from '@material-ui/core'
 import axios from 'axios'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import { Link } from 'react-router-dom'
+import Meta from '../../components/Meta/Meta'
 
 const AddEmployee = ({ history }) => {
   const validationSchema = yup.object().shape({
@@ -27,6 +28,8 @@ const AddEmployee = ({ history }) => {
   })
 
   return (
+    <>
+    <Meta title={'Add Employee'}/>
     <Container fluid className='adduser-container'>
       <Row className='justify-content-center'>
         <Col lg={9} md={7} sm={8} className='form-wrapper'>
@@ -138,6 +141,7 @@ const AddEmployee = ({ history }) => {
         </Col>
       </Row>
     </Container>
+    </>
   )
 }
 

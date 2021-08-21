@@ -9,6 +9,7 @@ import { DataGrid } from '@material-ui/data-grid'
 import { Tooltip, Zoom } from '@material-ui/core'
 import axios from 'axios'
 import { columns, options } from '../../constants/constants'
+import Meta from '../../components/Meta/Meta'
 
 const UploadFile = () => {
   const [selectedFile, setSelectedFile] = useState([])
@@ -44,7 +45,7 @@ const UploadFile = () => {
 
   const handleFiles = (files) => {
     if (fileUtils.validateFile(files[0])) {
-      setSelectedFile((prevArray) => [files[0], ...prevArray])
+      setSelectedFile((prevArray) => [...prevArray, files[0]])
       setIsCsv(true)
     } else {
       setErrorMessage('Please Upload CSV File!!!')
@@ -106,6 +107,7 @@ const UploadFile = () => {
 
   return (
     <>
+    <Meta title={'Upload Employee File'}/>
       {toggle ? (
         <Container fluid className='upload-wrapper'>
           {errorMessage || infoMessage ? toastHandler() : ''}
@@ -133,7 +135,9 @@ const UploadFile = () => {
               onDragLeave={fileUtils.dragLeave}
               onDrop={fileDrop}
             >
+              <Tooltip TransitionComponent={Zoom} title='Browse file from your computer' arrow>
               <Publish className='icon-style' />
+              </Tooltip>
               <div className='drop-message pt-2'>
                 Drap & Drop File here or Click to Select Your File
               </div>

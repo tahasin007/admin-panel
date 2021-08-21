@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,300&display=swap');
+
 .content-wrapper {
   margin-top: 60px;
   .main-content {
+    .my-title{
+      font-family: 'Urbanist',
+      sans-serif;
+    }
     margin-left: 20%;
     width: 80%;
     .btn-primary {

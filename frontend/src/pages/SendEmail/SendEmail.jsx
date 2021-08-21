@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './SendEmail.scss'
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import * as yup from 'yup'
@@ -6,15 +7,24 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Send } from '@material-ui/icons'
+import { useLocation } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { options } from '../../constants/constants'
+import Meta from '../../components/Meta/Meta'
 
-const SendEmail = () => {
+const SendEmail = ({ match }) => {
   const [users, setUsers] = useState([])
-
+  const [infoMessage, setinfoMessage] = useState(null)
+  const [employeeEmail, setEmployeeEmail] = useState('')
+  const location = useLocation()
   useEffect(() => {
     axios.get('http://localhost:5000/api/users').then((res) => {
       setUsers(res.data)
     })
-  }, [])
+    if (location.state) {
+      setEmployeeEmail(location.state.detail.toString())
+    }
+  }, [location])
 
   yup.addMethod(yup.mixed, 'employeeExist', function (errorMessage) {
     let emails = []
@@ -41,6 +51,11 @@ const SendEmail = () => {
     })
   })
 
+  const toastHandler = () => {
+    toast.info(infoMessage, options)
+    setinfoMessage(null)
+  }
+
   const validationSchema = yup.object().shape({
     emailAddress: yup
       .string()
@@ -51,12 +66,16 @@ const SendEmail = () => {
   })
 
   return (
+    <>
+    <Meta title={'Send Email'}/>
     <Container fluid className='mail-container'>
+      {infoMessage ? toastHandler() : ''}
       <Row className='justify-content-center'>
         <Col lg={9} md={7} sm={8} className='mail-wrapper'>
           <Formik
+            enableReinitialize
             initialValues={{
-              emailAddress: '',
+              emailAddress: employeeEmail,
               emailSubject: '',
               emailBody: '',
             }}
@@ -68,7 +87,7 @@ const SendEmail = () => {
                 .then((res) => {
                   actions.setSubmitting(false)
                   actions.resetForm()
-                  // history.push('/users')
+                  setinfoMessage(res.data.message)
                 })
                 .catch((error) => {
                   actions.setSubmitting(false)
@@ -152,6 +171,7 @@ const SendEmail = () => {
         </Col>
       </Row>
     </Container>
+    </>
   )
 }
 

@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "1234abcd",
-    "database": "lordadmin",
-    "host": "127.0.0.1",
+    "username": "uc6tgywj0iqcsfct",
+    "password": "RZk5Smw0Z9iYzNB4UDZu",
+    "database": "boxryrnm2tzrdk417r63",
+    "host": "boxryrnm2tzrdk417r63-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     "logging": false
   },
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "uc6tgywj0iqcsfct",
+    "password": "RZk5Smw0Z9iYzNB4UDZu",
+    "database": "boxryrnm2tzrdk417r63",
+    "host": "boxryrnm2tzrdk417r63-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     "logging": false
   }
